@@ -1,65 +1,192 @@
-import Image from "next/image";
+// app/page.tsx
+// Main portfolio page - single scrollable page with all sections
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-[#0F1117] text-white">
+
+      {/* NAV */}
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0F1117]/80 backdrop-blur-sm">
+        <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+          <span className="font-mono text-sm text-white/60">dominic fiorelli</span>
+          <div className="flex gap-8 text-sm text-white/60">
+            <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#projects" className="hover:text-white transition-colors">Projects</a>
+            <a href="#skills" className="hover:text-white transition-colors">Skills</a>
+            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section className="max-w-5xl mx-auto px-6 pt-40 pb-32">
+        <p className="text-[#4F8EF7] font-mono text-sm mb-4">Hey, I'm</p>
+        <h1 className="text-6xl font-bold tracking-tight mb-4">
+          Dominic Fiorelli
+        </h1>
+        <h2 className="text-2xl text-white/60 font-light mb-8">
+          CS Student & AI/ML Engineer
+        </h2>
+        <p className="text-white/50 text-lg max-w-xl leading-relaxed mb-10">
+          Building intelligent systems at the intersection of agentic AI, 
+          RAG pipelines, and real-world software engineering. 
+          Graduating December 2026 from DePaul University.
+        </p>
+        <div className="flex gap-4">
+            <a href="#projects" className="px-6 py-3 bg-[#4F8EF7] text-white rounded-lg font-medium hover:bg-[#3A7AE4] transition-colors">
+              View Projects
+            </a>
+            <a href="#contact" className="px-6 py-3 border border-white/20 text-white/70 rounded-lg font-medium hover:border-white/40 hover:text-white transition-colors">
+              Get in Touch
+            </a>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="max-w-5xl mx-auto px-6 py-24 border-t border-white/10">
+        <p className="text-[#4F8EF7] font-mono text-sm mb-3">01 — About</p>
+        <h3 className="text-3xl font-bold mb-8">Who I Am</h3>
+        <div className="max-w-2xl text-white/60 text-lg leading-relaxed space-y-4">
+          <p>
+            I'm a Computer Science student at DePaul University with a 3.7 GPA, 
+            expected to graduate in December 2026. I specialize in AI/ML engineering 
+            with a focus on agentic systems, RAG pipelines, and multi-agent architectures.
+          </p>
+          <p>
+            I build things that actually work — from a 4-agent LangGraph pipeline that 
+            automates job applications, to a multi-agent prompt injection detection system 
+            achieving 83.3% accuracy. I'm targeting AI/ML engineering roles in Chicago 
+            and plan to relocate in early 2027.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+      </section>
+
+      {/* PROJECTS */}
+      <section id="projects" className="max-w-5xl mx-auto px-6 py-24 border-t border-white/10">
+        <p className="text-[#4F8EF7] font-mono text-sm mb-3">02 — Projects</p>
+        <h3 className="text-3xl font-bold mb-12">What I've Built</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {/* ColdIQ */}
+          <a href="/projects/coldiq" className="group block p-6 bg-white/5 border border-white/10 rounded-xl hover:border-[#4F8EF7]/50 hover:bg-white/8 transition-all">
+            <div className="flex items-start justify-between mb-4">
+              <span className="text-xs font-mono text-[#4F8EF7] bg-[#4F8EF7]/10 px-2 py-1 rounded">LangGraph · RAG · OpenAI</span>
+              <span className="text-white/30 group-hover:text-white/60 transition-colors">↗</span>
+            </div>
+            <h4 className="text-xl font-semibold mb-2">ColdIQ</h4>
+            <p className="text-white/50 text-sm leading-relaxed">
+              4-agent LangGraph pipeline that qualifies job fit, finds hiring managers, 
+              and drafts personalized cold outreach emails grounded in a RAG knowledge base.
+            </p>
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+
+          {/* Prompt Injection */}
+          <a href="/projects/prompt-injection" className="group block p-6 bg-white/5 border border-white/10 rounded-xl hover:border-[#4F8EF7]/50 hover:bg-white/8 transition-all">
+            <div className="flex items-start justify-between mb-4">
+              <span className="text-xs font-mono text-[#4F8EF7] bg-[#4F8EF7]/10 px-2 py-1 rounded">LangGraph · OpenAI · Python</span>
+              <span className="text-white/30 group-hover:text-white/60 transition-colors">↗</span>
+            </div>
+            <h4 className="text-xl font-semibold mb-2">Multi-Agent Prompt Injection Detection</h4>
+            <p className="text-white/50 text-sm leading-relaxed">
+              3-agent parallel fan-out/fan-in architecture achieving 83.3% accuracy 
+              and 0.789 Macro F1 detecting adversarial prompt injection attempts.
+            </p>
+          </a>
+
+          {/* RAG Pipeline */}
+          <a href="/projects/rag-pipeline" className="group block p-6 bg-white/5 border border-white/10 rounded-xl hover:border-[#4F8EF7]/50 hover:bg-white/8 transition-all">
+            <div className="flex items-start justify-between mb-4">
+              <span className="text-xs font-mono text-[#4F8EF7] bg-[#4F8EF7]/10 px-2 py-1 rounded">LangChain · FAISS · HuggingFace</span>
+              <span className="text-white/30 group-hover:text-white/60 transition-colors">↗</span>
+            </div>
+            <h4 className="text-xl font-semibold mb-2">RAG Pipeline for Document Q&A</h4>
+            <p className="text-white/50 text-sm leading-relaxed">
+              Retrieval-augmented generation pipeline using LangChain and FAISS for 
+              vector storage, grounding LLM outputs in domain-specific document data.
+            </p>
+          </a>
+
+          {/* MCP Testing */}
+          <a href="/projects/mcp-testing" className="group block p-6 bg-white/5 border border-white/10 rounded-xl hover:border-[#4F8EF7]/50 hover:bg-white/8 transition-all">
+            <div className="flex items-start justify-between mb-4">
+              <span className="text-xs font-mono text-[#4F8EF7] bg-[#4F8EF7]/10 px-2 py-1 rounded">FastMCP · JUnit · Playwright</span>
+              <span className="text-white/30 group-hover:text-white/60 transition-colors">↗</span>
+            </div>
+            <h4 className="text-xl font-semibold mb-2">MCP-Based Automated Testing Agent</h4>
+            <p className="text-white/50 text-sm leading-relaxed">
+              Autonomous testing agent achieving 98.3% JaCoCo instruction coverage 
+              through 33 JUnit tests with CI/CD pipeline and Playwright UI testing.
+            </p>
+          </a>
+
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section id="skills" className="max-w-5xl mx-auto px-6 py-24 border-t border-white/10">
+        <p className="text-[#4F8EF7] font-mono text-sm mb-3">03 — Skills</p>
+        <h3 className="text-3xl font-bold mb-12">What I Work With</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <div>
+            <h4 className="text-sm font-mono text-white/40 uppercase tracking-widest mb-4">AI/ML</h4>
+            <div className="flex flex-wrap gap-2">
+              {["LangChain", "LangGraph", "FAISS", "HuggingFace", "RAG Pipelines", "OpenAI API", "Prompt Engineering", "Multi-Agent Systems"].map(skill => (
+                <span key={skill} className="text-sm px-3 py-1 bg-white/5 border border-white/10 rounded-full text-white/70">{skill}</span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-mono text-white/40 uppercase tracking-widest mb-4">Languages</h4>
+            <div className="flex flex-wrap gap-2">
+              {["Python", "Java", "SQL", "TypeScript", "JavaScript", "Scala", "C", "R"].map(skill => (
+                <span key={skill} className="text-sm px-3 py-1 bg-white/5 border border-white/10 rounded-full text-white/70">{skill}</span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-mono text-white/40 uppercase tracking-widest mb-4">Tools & Frameworks</h4>
+            <div className="flex flex-wrap gap-2">
+              {["React", "Next.js", "Flask", "Git", "PostgreSQL", "JUnit", "FastMCP", "CI/CD", "Playwright"].map(skill => (
+                <span key={skill} className="text-sm px-3 py-1 bg-white/5 border border-white/10 rounded-full text-white/70">{skill}</span>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="max-w-5xl mx-auto px-6 py-24 border-t border-white/10">
+        <p className="text-[#4F8EF7] font-mono text-sm mb-3">04 — Contact</p>
+        <h3 className="text-3xl font-bold mb-4">Let's Talk</h3>
+        <p className="text-white/50 text-lg max-w-xl mb-10">
+          I'm actively looking for AI/ML engineering roles starting early 2027. 
+          If you're building something interesting, let's connect.
+        </p>
+        <div className="flex gap-6">
+          <a href="mailto:DominicFiorelli@gmail.com" className="text-white/60 hover:text-white transition-colors">
+            Email ↗
+          </a>
+          <a href="https://github.com/DomFIo" target="_blank" className="text-white/60 hover:text-white transition-colors">
+            GitHub ↗
+          </a>
+          <a href="https://linkedin.com/in/dominicfiorelli-13794a238" target="_blank" className="text-white/60 hover:text-white transition-colors">
+            LinkedIn ↗
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-white/10 py-8">
+        <div className="max-w-5xl mx-auto px-6 flex items-center justify-between text-white/30 text-sm">
+          <span>Dominic Fiorelli © 2026</span>
+          <span className="font-mono">Built with Next.js</span>
+        </div>
+      </footer>
+
+    </main>
   );
 }
