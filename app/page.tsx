@@ -173,7 +173,7 @@ export default function Home() {
           <a href="https://github.com/DomFIo" target="_blank" className="text-white/60 hover:text-white transition-colors">
             GitHub ↗
           </a>
-          <a href="https://linkedin.com/in/dominicfiorelli-13794a238" target="_blank" className="text-white/60 hover:text-white transition-colors">
+          <a href="https://www.linkedin.com/in/dominicfiorelli-13794a238" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
             LinkedIn ↗
           </a>
         </div>
