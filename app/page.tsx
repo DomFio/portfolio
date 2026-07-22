@@ -29,7 +29,7 @@ export default function Home() {
         </h2>
         <p className="text-white/50 text-lg max-w-xl leading-relaxed mb-10">
           Building intelligent systems at the intersection of agentic AI, 
-          RAG pipelines, and real-world software engineering. 
+          RAG pipelines, and real world software engineering. 
           Graduating December 2026 from DePaul University.
         </p>
         <div className="flex gap-4">
@@ -48,15 +48,14 @@ export default function Home() {
         <h3 className="text-3xl font-bold mb-8">Who I Am</h3>
         <div className="max-w-2xl text-white/60 text-lg leading-relaxed space-y-4">
           <p>
-            I'm a Computer Science student at DePaul University with a 3.7 GPA, 
+            I'm a Computer Science student at DePaul University, 
             expected to graduate in December 2026. I specialize in AI/ML engineering 
             with a focus on agentic systems, RAG pipelines, and multi-agent architectures.
           </p>
           <p>
-            I build things that actually work — from a 4-agent LangGraph pipeline that 
+            I Love building practical tools. From a 4-agent LangGraph pipeline that 
             automates job applications, to a multi-agent prompt injection detection system 
-            achieving 83.3% accuracy. I'm targeting AI/ML engineering roles in Chicago 
-            and plan to relocate in early 2027.
+            achieving 83.3% accuracy. I'm targeting AI/ML engineering roles in Chicago.
           </p>
         </div>
       </section>
@@ -163,7 +162,8 @@ export default function Home() {
         <p className="text-[#4F8EF7] font-mono text-sm mb-3">04 — Contact</p>
         <h3 className="text-3xl font-bold mb-4">Let's Talk</h3>
         <p className="text-white/50 text-lg max-w-xl mb-10">
-          I'm actively looking for AI/ML engineering roles starting early 2027. 
+          I'm actively looking for AI/ML engineering Internship 
+          to have during my last quarter at DePaul. 
           If you're building something interesting, let's connect.
         </p>
         <div className="flex gap-6">
