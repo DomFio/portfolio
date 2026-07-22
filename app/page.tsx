@@ -27,11 +27,11 @@ export default function Home() {
         <h2 className="text-2xl text-white/60 font-light mb-8">
           CS Student & AI/ML Engineer
         </h2>
-        <p className="text-white/50 text-lg max-w-xl leading-relaxed mb-10">
+        {/* <p className="text-white/50 text-lg max-w-xl leading-relaxed mb-10">
           Building intelligent systems at the intersection of agentic AI, 
           RAG pipelines, and real world software engineering. 
           Graduating December 2026 from DePaul University.
-        </p>
+        </p> */}
         <div className="flex gap-4">
             <a href="#projects" className="px-6 py-3 bg-[#4F8EF7] text-white rounded-lg font-medium hover:bg-[#3A7AE4] transition-colors">
               View Projects
@@ -53,9 +53,15 @@ export default function Home() {
             with a focus on agentic systems, RAG pipelines, and multi-agent architectures.
           </p>
           <p>
-            I Love building practical tools. From a 4-agent LangGraph pipeline that 
-            automates job applications, to a multi-agent prompt injection detection system 
-            achieving 83.3% accuracy. I'm targeting AI/ML engineering roles in Chicago.
+            I Love building practical tools. In attempt to help me find a job, 
+            a 4-agent LangGraph pipeline that automates cold emails for job applications. 
+            I am currently working on Study Buddy. A RAG powered 'Study buddy' that reads
+            your links, or textbooks and helps you learn the material faster. 
+            With summaries, Q&A, and quizzes grounded directly
+            in the source content.
+          </p>
+          <p>
+            I am actively looking for AI/ML engineering roles!
           </p>
         </div>
       </section>
